@@ -1,0 +1,466 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price</title>    
+    <link rel="stylesheet" href="static\css\style.css">
+</head>
+
+<body bgcolor="skyblue">
+	<div class="container">
+		<a2>Please fill the parameters below and click on Selling Price button to check car price</a2>
+
+<div class="bg"></div>
+<p align="center" class="heading"><b>Used Car Price Prediction</b></p>
+<form action="\predict" method="post">
+<div align="center">
+          <div class="b"><b>Car Brand</b><br>
+            <select name="CarBrand" class="a">
+        <option value= > ---Please select from drop down--- </option>
+		<option value='acura' > Acura </option>
+		<option value= 'audi' > Audi </option>
+		<option value= 'bmw' > BMW </option>
+		<option value= 'buick' > Buick </option>
+		<option value= 'cadillac' > Cadillac </option>
+		<option value= 'chevrolet' > Chevrolet </option>
+		<option value= 'chrysler' > Chrysler </option>
+		<option value= 'dodge' > Dodge </option>
+		<option value= 'fiat' > FIAT </option>
+		<option value= 'ford' > Ford </option>
+		<option value= 'genesis' > Genesis </option>
+		<option value= 'gmc' > GMC </option>
+		<option value= 'honda' > Honda </option>
+        <option value= 'hummer' > HUMMER </option>
+		<option value= 'hyundai' > Hyundai </option>
+		<option value= 'infiniti' > INFINITI </option>
+		<option value= 'jeep' > Jeep </option>
+        <option value= 'kia' > Kia </option>
+		<option value= 'land rover' > Land Rover </option>
+		<option value= 'lexus' > Lexus </option>
+		<option value= 'lincoln' > Lincoln </option>
+		<option value= 'maserati' > Maserati </option>
+		<option value= 'mazda' > Mazda </option>
+		<option value= 'mercedes benz' > Mercedes Benz </option>
+		<option value= 'mercury' > Mercury </option>
+        <option value= 'min' > MINI </option>
+		<option value= 'nissan' > Nissan </option>
+		<option value= 'pontiac' > Pontiac </option>
+		<option value= 'porsche' > Porsche </option>
+		<option value= 'ram' > Ram </option>
+		<option value= 'scion' > Scion </option>
+		<option value= 'smart' > smart </option>
+		<option value= 'subaru' > Subaru </option>
+		<option value= 'toyota' > Toyota </option>
+        <option value= 'volkswagen' > Volkswagen </option>
+		<option value= 'volvo' > Volvo </option></select></div>
+<br>
+
+<div class="b"><b>Model</b><br>
+ <select name="Model" class="a">
+<option value= > ---Please select from drop down--- </option>
+<option value= 'cts-v' > cts-v </option>
+<option value= 'forte' > forte </option>
+<option value= 'escape' > escape </option>
+<option value= 'corolla' > corolla </option>
+<option value= 'rogue' > rogue </option>
+<option value= '1500' > 1500 </option>
+<option value= 'altima' > altima </option>
+<option value= 'f-150' > f-150</option>
+<option value= 'explorer' > explorer</option>
+<option value= 'malibu' > malibu</option>
+<option value= 'civic' > civic</option>
+<option value= 'silverado 1500' > silverado 1500</option>
+<option value= 'sentra' > sentra</option>
+<option value= 'rav4' > rav4</option>
+<option value= '4runner' > 4runner</option>
+<option value= 'equinox' > equinox</option>
+<option value= 'xt5' > xt5</option>
+<option value= 'c-class' > c-class</option>
+<option value= 'fusion' > fusion</option>
+<option value= 'super duty f-250' > super duty f-250</option>
+<option value= 'edge' > edge</option>
+<option value= 'volt' > volt</option>
+<option value= 'camry' > camry</option>
+<option value= 'tundra' > tundra</option>
+<option value= 'cherokee' > cherokee</option>
+<option value= 'sierra 1500' > sierra 1500</option>
+<option value= 'grand cherokee' > grand cherokee</option>
+<option value= 'accord' > accord</option>
+<option value= 'sonata' > sonata</option>
+<option value= 'es' > es</option>
+<option value= 'tahoe' > tahoe</option>
+<option value= 'compass' > compass</option>
+<option value= 'soul' > soul</option>
+<option value= 'q50' > q50</option>
+<option value= 'focus' > focus</option>
+<option value= 'elantra' > elantra</option>
+<option value= 'gle' > gle</option>
+<option value= 'terrain' > terrain</option>
+<option value= 'challenger' > challenger</option>
+<option value= 'e-class' > e-class</option>
+<option value= 'santa fe sport' > santa fe sport</option>
+<option value= 'ranger' > ranger</option>
+<option value= 'journey' > journey</option>
+<option value= 'jetta' > jetta</option>
+<option value= 'm3' > m3</option>
+<option value= 'q5' > q5</option>
+<option value= 'mustang' > mustang</option>
+<option value= 'c-hr' > c-hr</option>
+<option value= 'wrangler' > wrangler</option>
+<option value= 'tacoma' > tacoma</option>
+<option value= '200' > 200</option>
+<option value= 'cr-v' > cr-v</option>
+<option value= 'tiguan' > tiguan</option>
+<option value= 'optima' > optima</option>
+<option value= 'qx50' > qx50</option>
+<option value= '3 series' > 3 series</option>
+<option value= 'cruze' > cruze</option>
+<option value= 'encore' > encore</option>
+<option value= 'is' > is</option>
+<option value= 'cx-5' > cx-5</option>
+<option value= 'express cargo' > express cargo</option> van
+<option value= 'versa' > versa</option>
+<option value= 'super duty f-3' > super duty f-3</option>50
+<option value= 'murano' > murano</option>
+<option value= 's-class' > s-class</option>
+<option value= 'colorado' > colorado</option>
+<option value= 'x3' > x3</option>
+<option value= 'charger' > charger</option>
+<option value= '4 series' > 4 series</option>
+<option value= 'odyssey' > odyssey</option>
+<option value= 'x2' > x2</option>
+<option value= 'impala' > impala</option>
+<option value= 'm5' > m5</option>
+<option value= 'cla' > cla</option>
+<option value= 'q45' > q45</option>
+<option value= 'glc' > glc</option>
+<option value= 'x5' > x5</option>
+<option value= 'gx' > gx</option>
+<option value= 'rx' > rx</option>
+<option value= '1500 classi' > 1500 classi</option>c
+<option value= 'nx' > nx</option>
+<option value= 'frontier' > frontier</option>
+<option value= 'freestar cargo va' > freestar cargo va</option>n
+<option value= 'g80' > g80</option>
+<option value= 'fit' > fit</option>
+<option value= 'expedition' > expedition</option>
+<option value= 'sportage' > sportage</option>
+<option value= 'h2' > h2</option>
+<option value= 'highlander' > highlander</option>
+<option value= 'durango' > durango</option>
+<option value= 'outback' > outback</option>
+<option value= 'x1' > x1</option>
+<option value= 'rogue sport' > rogue sport</option>
+<option value= 'crosstrek' > crosstrek</option>
+<option value= 'camaro' > camaro</option>
+<option value= 'gladiator' > gladiator</option>
+<option value= 'sorento' > sorento</option>
+<option value= 'enclave' > enclave</option>
+<option value= 'gla' > gla</option>
+<option value= 'bonneville' > bonneville</option>
+<option value= 'tucson' > tucson</option>
+<option value= 'mirai' > mirai</option>
+<option value= 'prius' > prius</option>
+<option value= 'traverse' > traverse</option>
+<option value= 'trax' > trax</option>
+<option value= 'leaf' > leaf</option>
+<option value= 'qx60' > qx60</option>
+<option value= 'atlas' > atlas</option>
+<option value= 'acadia' > acadia</option>
+<option value= 'gransport' > gransport</option>
+<option value= 'range rover' > range rover</option>
+<option value= 'passat' > passat</option>
+<option value= 'renegade' > renegade</option>
+<option value= '300' > 300</option>
+<option value= 'tc' > tc</option>
+<option value= 'mkx' > mkx</option>
+<option value= 'sc' > sc</option>
+<option value= 'xc70' > xc70</option>
+<option value= '2500' > 2500</option>
+<option value= 'nexo' > nexo</option>
+<option value= 'titan' > titan</option>
+<option value= 'silverado 2500hd' > silverado 2500hd</option>
+<option value= 'mazda6' > mazda6</option>
+<option value= 'wrx' > wrx</option>
+<option value= 'town & count' > town & count</option>ry
+<option value= 'macan' > macan</option>
+<option value= 'land cruiser' > land cruiser</option>
+<option value= 'armada' > armada</option>
+<option value= 'pilot' > pilot</option>
+<option value= 'grand caravan' > grand caravan</option>
+<option value= 'gs' > gs</option>
+<option value= '5 series' > 5 series</option>
+<option value= 'santa fe' > santa fe</option>
+<option value= 'impreza' > impreza</option>
+<option value= 'ecosport' > ecosport</option>
+<option value= 'bolt ev' > bolt ev</option>
+<option value= 'fortwo' > fortwo</option>
+<option value= 'ascent' > ascent</option>
+<option value= 'azera' > azera </option>
+<option value= 'escalade' > escalade </option>
+<option value= 'avenger' > avenger </option>
+<option value= 'fiesta' > fiesta</option>
+<option value= 'grand marquis' > grand marquis</option>
+<option value= 'sprinter cargo van' > sprinter cargo van</option>
+<option value= 'palisade' > palisade</option>
+<option value= 'elr' > elr</option>
+<option value= 'z3' > z3</option>
+<option value= 'cruze limited' > cruze limited</option>
+<option value= 'yukon' > yukon</option>
+<option value= 'hr-v' > hr-v</option>
+<option value= 'sierra 2500hd' > sierra 2500hd</option>
+<option value= 'forester' > forester</option>
+<option value= 'ls' > ls</option>
+<option value= 'sprinter chassis cab' > sprinter chassis cab</option>
+<option value= 'mkz' > mkz</option>
+<option value= 'fj cruiser' > fj cruiser</option>
+<option value= 'silverado 1500 ld' > silverado 1500 ld</option>
+<option value= 'sl' > sl</option>
+<option value= 'venture' > venture</option>
+<option value= 'equus' > equus</option>
+<option value= 'gl' > gl</option>
+<option value= 'sienna' > sienna</option>
+<option value= 'corvette' > corvette</option>
+<option value= 'pacifica' > pacifica</option>
+<option value= 'xc60' > xc60</option>
+<option value= 'x5 m' > x5 m</option>
+<option value= 'dart' > dart</option>
+<option value= 'rdx' > rdx</option>
+<option value= 'rogue select' > rogue select</option>
+<option value= 'kicks' > kicks</option>
+<option value= 'patriot' > patriot</option>
+<option value= 'gls' > gls</option>
+<option value= 'c-max' > c-max</option>
+<option value= 'pathfinder' > pathfinder</option>
+<option value= 'mdx' > mdx</option>
+<option value= 'tiguan limited' > tiguan limited</option>
+<option value= 'maxima' > maxima</option>
+<option value= 'excursion' > excursion</option>
+<option value= 'impala limited police' > impala limited police</option>
+<option value= 'police interceptor' > police interceptor</option>
+<option value= '3500' > 3500</option>
+<option value= 'ia' > ia</option>
+<option value= 'hs' > hs</option>
+<option value= 'uplander' > uplander</option>
+<option value= 'fr-s' > fr-s</option>
+<option value= '500e' > 500e</option>
+<option value= 'ct' > ct</option>
+<option value= 'rlx' > rlx</option>
+<option value= 'hardtop' > hardtop</option>
+<option value= 'accent' > accent</option>
+<option value= 'utility police interceptor' > utility police interceptor</option>
+</select>
+<br>
+<br>
+<div class="b"><b>Year Of Purchase</b><br>
+        <input class="a" type="number" name ="Year" required="required"></div>
+<br>
+
+<div class="b"><b>Miles</b><br>
+            <input class="a" type="number" name ="Miles" required="required"></div>
+<br>
+ <div class="b"><b>State</b><br>
+            <select name="State" class="a">
+                <option value= > ---Please select from drop down--- </option>
+		<option value='tx' > Texas</option>
+		<option value= 'nc' > North Carolina </option>
+		<option value= 'fl' > Florida </option>
+		<option value= 'ny' > New York</option>
+		<option value= 'mi' > Michigan </option>
+		<option value= 'ut' > Utah </option>
+		<option value= 'in' > Indiana</option>
+		<option value= 'k' > Kentucky </option>
+		<option value= 'nj' > New Jersey</option>
+		<option value= 'nd' > North Dakota</option>
+		<option value= 'mn' > Minnesota</option>
+		<option value= 'oh' > Ohio</option>
+		<option value= 'or' > Oregon</option>
+        <option value= 'pa' > Pennsylvania</option>
+		<option value= 'ca' > California</option>
+		<option value= 'ks' > Kansas</option>
+		<option value= 'va' > Virginia</option>
+        <option value= 'ne' > Nebraska</option>
+		<option value= 'id' > Idaho</option>
+		<option value= 'ga' > Georgia</option>
+		<option value= 'mo' > Missouri</option>
+		<option value= 'az' > Arizona</option>
+		<option value= 'tn' > Tennessee</option>
+		<option value= 'sc' > South Carolina</option>
+		<option value= 'md' > Maryland</option>
+        <option value= 'ms' > Mississippi</option>
+		<option value= 'wa' > Washington</option>
+		<option value= 'il' > Illinois</option>
+		<option value= 'la' > Louisiana</option>
+		<option value= 'co' > Colorado</option>
+		<option value= 'ak' > Alaska</option>
+		<option value= 'nv' > Nevada</option>
+		<option value= 'al' > Alabama</option>
+		<option value= 'ok' > Oklahoma</option>
+        <option value= 'wy' > Wyoming</option>
+		<option value= 'wi' > Wisconsin</option>
+        <option value= 'nm' > New Mexico</option>
+        <option value= 'ma' > Massachusetts</option>
+        <option value= 'ar' > Arkansas</option>
+        <option value= 'ia' > Iowa</option>
+        <option value= 'mt' > Montana</option>
+        <option value= 'ct' > Connecticut</option>
+        <option value= 'me' > Maine</option>
+        <option value= 'sd' > South Dakota</option>
+        <option value= 'nh' > New Hampshire</option>
+        <option value= 'ri' > Rhode Island</option>
+        <option value= 'de' > Delaware</option>
+        <option value= 'hi' > Hawaii</option>
+        <option value= 'vi' > Vermont</option>
+        <option value= 'wv' > West Virginia</option>
+</select></div>
+<br>
+
+
+ <div class="b"><b>Exterior Colour</b><br>
+            <select name="ExteColor" class="a">
+                <option value= > ---Please select from drop down--- </option>
+		<option value='gray' > Gray</option>
+		<option value= 'red' > Red </option>
+		<option value= 'white' > White</option>
+		<option value= 'silver' > Silver</option>
+		<option value= 'black' > Black</option>
+		<option value= 'blue' > Blue</option>
+		<option value= 'unknown' > Unknown</option>
+		<option value= 'tan' > Tan</option>
+		<option value= 'orange' > Orange</option>
+		<option value= 'gold' > Gold</option>
+		<option value= 'brown' > Brown</option>
+		<option value= 'maroon' > Maroon</option>
+		<option value= 'green' > Green</option>
+                <option value= 'copper' > Copper</option>
+</select></div>
+<br>
+
+
+ <div class="b"><b>Interior Colour</b><br>
+    <select name="InterColor" class="a">
+        <option value= > ---Please select from drop down--- </option>
+		<option value= 'black' > Black</option>
+		<option value='gray' > Gray</option>
+		<option value= 'beige' > Beige</option>
+		<option value= 'unknown' > Unknown</option>
+		<option value= 'blue' > Blue</option>
+		<option value= 'white' > White</option>
+		<option value= 'red' > Red </option>
+		<option value= 'brown' > Brown</option>
+		<option value= 'green' > Green</option>
+		<option value= 'orange' > Orange</option>
+</select></div>
+<br>
+
+
+<div class="b"><b>Style</b><br>
+            <select name="style" class="a">
+                <option value= > ---Please select from drop down--- </option>
+		<option value= 'sedan' > Sedan</option>
+		<option value='suv' > SUV</option>
+		<option value= 'pickup truck' > Pickup truck</option>
+		<option value= 'hatchback' > Hatchback</option>
+		<option value= 'coupe' > Coupe</option>
+		<option value= 'cargo van' > Cargo van</option>
+		<option value= 'minivan' > Minivan </option>
+		<option value= 'convertible' > Convertible</option>
+		<option value= 'wagon' > Wagon</option>
+		<option value= 'chassis cab truck' > Chassis cab truck</option>
+</select></div>
+<br>
+
+<div class="b"><b>Drive Type</b><br>
+            <select name="DriveType" class="a">
+		<option value= '4WD' > 4WD</option>
+		<option value= 'AWD' > AWD</option>
+		<option value= 'RWD' > RWD</option>
+		<option value= 'FWD' > FWD</option>
+</select></div>
+<br>
+
+<div class="b"><b>Transmission</b><br>
+  <select name="Transmission" class="a">
+		<option value="1">Automatic</option>
+		<option value="0">Manual</option>
+</select></div>
+<br>
+
+<div class="b"><b>Accidents</b><br>
+            <select name="Accidents" class="a">
+                <option value= > ---Please select from drop down--- </option>
+		<option value= 'No accidents' > No accidents</option>
+		<option value= '1 accident' > 1 accident</option>
+		<option value= '2 accidents' > 2 accidents</option>
+		<option value= '3 accidents' > 3 accidents</option>
+</select></div>
+<br>
+
+<div class="b"><b>No. of Owners</b><br>
+            <select name="NoOfOwners" class="a">
+                <option value= > ---Please select from drop down--- </option>
+		<option value= '8' > 1 Owner</option>
+		<option value= '7' > 2 Owners</option>
+		<option value= '6' > 3 Owners</option>
+		<option value= '5' > 4 Owners</option>
+		<option value= '4' > 5 Owners</option>
+		<option value= '3' > 6 Owners</option>
+		<option value= '2' > 7 Owners</option>
+		<option value= '1' > 8 Owners</option>
+		<option value= '0' > 9 Owners</option>
+</select></div>
+<br>
+
+<div class="b"><b>UseType</b><br>
+  <select name="UseType" class="a">
+		<option value="personal use">Personal use</option>
+		<option value="fleet use">Fleet use</option>
+</select></div>
+<br>
+
+<div class="b"><b>Engine Size</b><br>
+            <input class="a" type="number" name ="Engine_L" required="required"></div>
+<br>
+
+<div class="b"><b>Engine Type</b><br>
+            <select name="Engine_Gas" class="a">
+                <option value= > ---Please select from drop down--- </option>
+		<option value= ' v-10' > V-10</option>
+		<option value= ' v-8' > V-8</option>
+		<option value= ' v-6' > V-6</option>
+		<option value= ' v-4' > V-4</option>
+		<option value= ' v-8 hybrid' > V-8 Hybrid</option>
+		<option value= ' v-6 hybrid' > V-6 Hybrid</option>
+		<option value= ' v-8 diesel turbocharged' > V-8 Diesel Turbocharged</option>
+		<option value= ' v-6 diesel turbocharged' > V-6 Diesel Turbocharged</option>
+		<option value= ' v-6 plug-in hybrid turbocharged' >  V-6 Plug-In Hybrid Turbocharged</option>
+		<option value= ' inline-3 ' > Inline-3 </option>
+		<option value= ' inline-4 ' > Inline-4 </option>
+		<option value= ' inline-5 ' > Inline-5 </option>
+		<option value= ' inline-6 ' > Inline-6 </option>
+		<option value= ' inline-8 ' > Inline-8 </option>
+		<option value= ' inline-4 plug-in hybrid' > Inline-4 Plug-In Hybrid</option>
+		<option value= ' inline-4 plug-in hybrid turbocharged' > Inline-4 Plug-In Hybrid Turbocharged</option>
+		<option value= ' inline-4 hybrid' > Inline-4 Hybrid</option>
+		<option value= ' inline-4 hybrid turbocharged' > Inline-4 Hybrid Turbocharged</option>
+		<option value= ' inline-6 diesel turbocharged' > Inline-6 Diesel Turbocharged </option>
+		<option value= ' inline-4 diesel turbocharged' > Inline-4 Diesel Turbocharged</option>
+		<option value= ' flat-4 ' >  Flat-4 </option>
+		<option value= ' - hydrogen' > Hydrogen</option>
+		<option value= ' - electric' > Electric</option>
+</select></div>
+<br>
+
+<div class="b"><b>MPG in city</b><br>
+            <input class="a" type="number" name ="MPG_cty" required="required"></div>
+
+<div class="b"><b>MPG on Hihgway</b><br>
+			<input class="a" type="number" name ="MPG_hwy" required="required"></div>
+
+<br><br><button id="sub" type="submit ">Selling Price</button>
+</form>
+<h3>{{ prediction }}<h3>
+<br>
+</div>
+</body>
+</html>
