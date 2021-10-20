@@ -5,7 +5,6 @@ import os
 import pandas as pd
 import numpy as np
 import sklearn
-import joblib
 
 app = Flask(__name__)
 model = pickle.load(open('prediction','rb'))
